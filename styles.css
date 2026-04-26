@@ -1,0 +1,718 @@
+
+
+:root {
+    --green-main:    #e32c2c;
+    --green-light:   #02bb5ff2;
+    --green-dark:    #008c44;
+    
+    --gold:          #f4b916dd;
+    --gold-dark:     #e0af00;
+    
+    --bg-main:       #ffffff;
+    --bg-light:      #f8f9fa;
+    --bg-card:       #ffffff;
+    --border-light:  #dee2e6;
+    
+    --text-primary:  #212529;
+    --text-muted:    #f0f2f3;
+    
+    --navbar-bg:     #ffffff;
+}
+.rounded-cornors {
+    border-radius: 50px;
+
+}
+body.dark-mode {
+    --bg-main:       #c30808;
+    --bg-light:      #1a1a1a;
+    --bg-card:       #181818;
+    --border-light:  #dbd4d4;
+    --text-primary:  #e9ecef;
+    --text-muted:    #000000;
+    --navbar-bg:     #0d0d0d;
+}
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+a { color: var(--green-main); }
+a:hover { color: var(--green-light); }
+
+/* Navbar */
+.navbar {
+    background-color: hsl(0, 0%, 100%) !important;
+    border-bottom: 1px solid #222;
+    box-shadow: 0 4px 12px rgba(90, 84, 84, 0.456);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.55rem;
+    letter-spacing: 0.5px;
+}
+
+.text-green { color: var(--green-main) !important; }
+
+.nav-link {
+    color: #090808 !important;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--green-main) !important;
+}
+
+/* Buttons */
+.btn-green {
+    background-color: var(--green-main);
+    border-color: var(--green-main);
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.25s ease;
+}
+
+.btn-green:hover {
+    background-color: var(--green-light);
+    border-color: var(--green-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(5, 203, 101, 0.708);
+}
+
+.btn-dark {
+    background-color: #1a1a1a;
+    border-color: #6e6c6c;
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(10,10,10,0.82), rgba(10,10,10,0.88)),
+                url('hero.jpg') center center / cover no-repeat fixed;
+    min-height: 90vh;
+    padding-top: 100px;
+    color: white;
+}
+
+.price-box {
+    background: rgba(51, 44, 44, 0.75);
+    border: 3px solid ;
+    border-radius: 60px;
+    padding: 12px 32px;
+    display: inline-block;
+}
+
+.old-price {
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    margin-right: 18px;
+}
+
+.new-price {
+    color: var(--gold);
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.hero-image {
+    border: 5px solid var(--green-main);
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,166,81,0.3);
+}
+
+/* Benefit cards */
+.benefit-card {
+    background: var(--bg-card);
+    border-left: 5px solid var(--green-main);
+    border-radius: 10px;
+    padding: 22px 18px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.benefit-card i {
+    font-size: 1.9rem;
+    margin-right: 14px;
+    color: var(--green-main);
+}
+
+/* Sections */
+.bg-dark  { background-color: var(--bg-dark) !important; }
+.bg-darker { background-color: var(--bg-darker) !important; }
+
+.page-header {
+    background: linear-gradient(135deg, #555353 0%, #1a1a1a 100%);
+    padding: 100px 0 80px;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-darker);
+    border-top: 1px solid #837c7c;
+}
+
+footer .small { color: #888; }
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #09ad45;
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+}
+/* Default (Light Mode) - Dark lines */
+.navbar-toggler {
+    border: none;
+    padding: 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(33, 37, 41, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dark Mode - White lines */
+body.dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.95)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Optional: Make the button background slightly visible on hover */
+.navbar-toggler:hover {
+    background-color: rgba(101, 226, 162, 0.1);
+}
+
+body.dark-mode .navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Responsive tweaks */
+@media (max-width: 992px) {
+    .hero { min-height: 80vh; padding-top: 90px; }
+    .new-price { font-size: 2.1rem; }
+    .old-price { font-size: 1.3rem; }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand { font-size: 1.35rem; }
+    .hero h1.display-3 { font-size: 2.4rem; }
+}
+/* Dark mode styles – applied when .dark-mode is on body */
+body.dark-mode {
+    --bg-main:       #0f0f0f;
+    --bg-light:      #efe7e7;
+    --bg-card:       #dbd1d1;
+    --border-light:  #d4cbcb;
+    --text-dark:     #e9ecef;
+    --text-muted:    #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #0d0d0d !important;
+    border-bottom-color: #333;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .nav-link {
+    color: #e9ecef !important;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(rgba(15,15,15,0.75), rgba(15,15,15,0.85)),
+                url('hero.jpg') center/cover no-repeat;
+    color: #f8f9fa;
+}
+
+body.dark-mode .price-box {
+    background: rgba(30,30,30,0.9);
+    border-color: none;
+    color: #f8f9fa;
+}
+
+body.dark-mode .benefit-card {
+    background: #1e1e1e;
+    border-color: #d0d0d0;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+
+body.dark-mode footer {
+    background: #0a0a0a;
+    border-top-color: #cd8c0a;
+    color: cd8c0a;
+}
+
+body.dark-mode footer h5 {
+    color: var(--green-main);
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .opacity-75 {
+    color: #ebedf0 !important;
+}
+
+.mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    color: #bcc8d3;                    /* Black in Light Mode */
+}
+
+body.dark-mode .mode-toggle {
+    color: #ffffff;                    /* White in Dark Mode */
+}
+
+.mode-toggle:hover {
+    background-color: rgba(76, 226, 148, 0.1);
+    transform: scale(1.1);
+}
+
+body.dark-mode .mode-toggle:hover {
+    background-color: rgba(255, 249, 249, 0.1);
+}
+
+/* Toggle button styling */
+.mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: color 0.3s, transform 0.2s;
+}
+
+body.dark-mode .mode-toggle {
+    color: #f9faf8;
+}
+
+.mode-toggle:hover {
+    color: var(--green-main);
+    transform: scale(1.15);
+}
+.result-card {
+  background: #11141d;
+  border: 1px solid #2d313f;
+  border-radius: 12px;
+  width: fit-content;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.academy-tag { color:#a70606; }
+.goat-status { color: #00bcd4; font-weight: bold; }
+
+.comparison-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 160px; /* Reduced size as requeste */
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.label {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: rgba(0,0,0,0.7);
+  color: #d30a0a;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.label.success { background: #00c853; }
+
+.process-arrow {
+  color: #00bcd4;
+  width: 24px;
+  height: 24px;
+  animation: pulse 1.5s infinite;
+}
+
+.card-footer p {
+  margin-top: 12px;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+@keyframes pulse {
+  0% { transform: translateX(0); opacity: 0.5; }
+  50% { transform: translateX(5px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0.5; }
+}
+
+footer {
+    background-color: var(--bg-light, #f8f9fa);
+    border-top: 1px solid var(--border-light, #dee2e6);
+    color: var(--text-primary, #212529);
+}
+
+footer h5 {
+    color: var(--green-main);
+    font-weight: 700;
+}
+
+footer a {
+    color: var(--text-primary, #212529);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--green-main);
+    text-decoration: none;
+}
+
+/* Social icons styling */
+.social-icon {
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--green-main) !important;
+    transform: translateY(-2px);
+}
+
+/* Dark mode footer adjustments */
+body.dark-mode footer {
+    background-color: var(--bg-darker, #000000);
+    border-top-color: #333;
+}
+
+body.dark-mode footer h5 {
+    color: var(--green-main);
+}
+
+body.dark-mode footer a,
+body.dark-mode footer .text-muted {
+    color: #e9ecef;
+}
+
+body.dark-mode footer a:hover {
+    color: var(--green-light, #d3aa2d);
+}
+
+.testimonials .blockquote {
+    background-color: var(--bg-card, #ffffff);
+    border-color: var(--green-main);
+    color: var(--text-primary, #000000);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .testimonials .blockquote {
+    background-color: var(--bg-card, #1e1e1e);
+    color: var(--text-primary, #ffffff);
+}
+
+.testimonials .blockquote-footer {
+    color: var(--text-muted, #000000);
+    font-size: 0.95rem;
+}
+
+body.dark-mode .testimonials .blockquote-footer {
+    color: var(--text-muted, #000000);
+}
+
+/* Hover effect for better UX */
+.testimonials .blockquote:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 166, 81, 0.12);
+}
+
+body.dark-mode {
+    color: #ffffff !important;
+}
+
+/* Make all text white in dark mode */
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode .text-muted,
+body.dark-mode .opacity-75,
+body.dark-mode .opacity-85,
+body.dark-mode .opacity-90,
+body.dark-mode .blockquote-footer,
+body.dark-mode small {
+    color: #ffffff !important;
+}
+
+/* Make icons white in dark mode */
+body.dark-mode i,
+body.dark-mode svg {
+    color: #ffffff !important;
+}
+
+
+body.dark-mode .text-green {
+    color: #cc8d18 !important;     /* Bright green */
+}
+
+body.dark-mode .new-price {
+    color: #e9a60b !important;     
+}
+
+/* Fix cards and quote backgrounds */
+body.dark-mode .card,
+body.dark-mode .blockquote,
+body.dark-mode .social-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+}
+
+/* Fix footer in dark mode */
+body.dark-mode footer {
+    background-color: #a3a0a0 !important;
+}
+body.dark-mode {
+    color: #ffffff !important;
+}
+
+
+
+/* Make icons and SVGs white in dark mode */
+body.dark-mode i,
+body.dark-mode svg {
+    color: #ffffff !important;
+}
+
+/* Keep brand green bright in dark mode */
+body.dark-mode .text-green {
+    color: #00b85c !important;   /* bright visible green */
+}
+
+/* Gold price stays gold */
+body.dark-mode .new-price {
+    color: #ffd700 !important;
+}
+
+/* Cards & Quote backgrounds in dark mode */
+body.dark-mode .card,
+body.dark-mode .blockquote,
+body.dark-mode .benefit-card,
+body.dark-mode .social-card,
+body.dark-mode .testimonials .blockquote {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+}
+
+/* Footer fix */
+body.dark-mode footer {
+    background-color: #0a0a0a !important;
+    color: #ffffff !important;
+}
+
+:root {
+    /* Light Mode Backgrounds */
+    --bg-main:       #ffffff;      /* Main page background */
+    --bg-light:      #f8f9fa;      /* Light sections (like resources, cards) */
+    --bg-card:       #ffffff;      /* Cards and containers */
+    --border-light:  #dee2e6;      /* Borders */
+    
+    /* Dark Mode Backgrounds */
+    --bg-main-dark:  #0f0f0f;      /* Main dark background */
+    --bg-light-dark: #1a1a1a;      /* Slightly lighter dark sections */
+    --bg-card-dark:  #1e1e1e;      /* Dark cards */
+    --border-dark:   #444444;      /* Dark borders */
+}
+
+/* Apply Light Mode by default */
+body {
+    background-color: var(--bg-main);
+}
+
+/* Dark Mode Backgrounds */
+body.dark-mode {
+    background-color: var(--bg-main-dark);
+}
+
+/* Light sections */
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--bg-light-dark) !important;
+}
+
+/* Cards */
+.card, .benefit-card, .social-card, .blockquote {
+    background-color: var(--bg-card) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .benefit-card,
+body.dark-mode .social-card,
+body.dark-mode .blockquote {
+    background-color: var(--bg-card-dark) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-light) !important;
+}
+
+body.dark-mode footer {
+    background-color: #0a0a0a !important;
+}
+
+:root {
+    /* Light Mode Backgrounds */
+    --bg-main:       #ffffff;      /* Main page background */
+    --bg-light:      #f8f9fa;      /* Light sections (like resources, cards) */
+    --bg-card:       #fbfaf5;      /* Cards and containers */
+    --border-light:  #b8bcbf;      /* Borders */
+    
+    /* Dark Mode Backgrounds */
+    --bg-main-dark:  #0f0f0f;      /* Main dark background */
+    --bg-light-dark: #1a1a1a;      /* Slightly lighter dark sections */
+    --bg-card-dark:  #1e1e1e;      /* Dark cards */
+    --border-dark:   #444444;      /* Dark borders */
+}
+
+/* Apply Light Mode by default */
+body {
+    background-color: var(--bg-main);
+}
+
+/* Dark Mode Backgrounds */
+body.dark-mode {
+    background-color: var(--bg-main-dark);
+}
+
+/* Light sections */
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+body.dark-mode .bg-light {
+    background-color: var(--bg-light-dark) !important;
+}
+
+/* Cards */
+.card, .benefit-card, .social-card, .blockquote {
+    background-color: var(--bg-card) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .benefit-card,
+body.dark-mode .social-card,
+body.dark-mode .blockquote {
+    background-color: var(--bg-card-dark) !important;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-light) !important;
+}
+
+body.dark-mode footer {
+    background-color: #0a0a0a !important;
+}
+
+
+.btn-green {
+    background-color: #a70606;
+    border-color: #b90c0cc4;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-green:hover {
+    background-color: #a70606;
+    border-color: #bf2727b5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px (0, 166, 81, 0.35);
+}
+
+/* Dark Mode - Make buttons slightly brighter and more visible */
+body.dark-mode .btn-green {
+    background-color: #00b85c;
+    border-color: #00b85c;
+    box-shadow: 0 6px 16px rgba(0, 184, 92, 0.4);
+}
+
+body.dark-mode .btn-green:hover {
+    background-color: #00d46b;
+    border-color: #00d46b;
+    box-shadow: 0 10px 25px rgba(0, 212, 107, 0.5);
+}
+
+/* Outline Green Button (used in Contact page) */
+.btn-outline-green {
+    border-color: #a70606;
+    color: #bc0e0e;
+    font-weight: 600;
+}
+
+body.dark-mode .btn-outline-green {
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.btn-outline-green:hover {
+    background-color: #f22626;
+    color: white;
+}
+
+body.dark-mode .btn-outline-green:hover {
+    background-color: #00ff9d;
+    color: #0f0f0f;
+}
